@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root{
+    --light: #F9F8FD;
+    --blue: #F5D7DB;
+    --beige: #DFB6B2;
+    --max-width: 1300px;
+}
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 99;
+}
+
+.nav_content{
+    max-width: var(--max-width);
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--blue);
+    transition: .3s;
+}
+
+nav .logo a{
+    color: var(--blue);
+}
+
+nav .checkbox{
+display: none;
+}
+
+
+nav input{
+    display: none;
+}
+
+nav .checkbox i{
+    font-size: 2rem;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a{
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+ul li a:hover{
+    border-top-color: var(--blue);
+    border-bottom-color: var(--blue);
+}
+
+.section{
+    background-color: var(--light);
+}
+
+.section_container{
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: 0 0 0 200px;
+    display: flex;
+    gap: 2rem;
+}
+
+
+.details img{
+    width: 270px;
+    text-align: center;
+    padding: 15px 15px 0 50px;
+}
+
+.details{
+    background-color: var(--blue);
+}
+.details h1{
+    flex-direction: column;
+    margin: 1em;
+}
+
+
+
+.details span{
+    margin: 10px;
+    font-weight: bold;
+}
+
+.details i{
+    margin: 20px;
+}
+.name{
+    margin: 0 10px 15px 70px;
+}
+
+.address{
+    margin: 0 10px 15px 70px;
+}
+
+.phone{
+    margin: 0 10px 15px 70px;
+}
+
+.email{
+    margin: 0 10px 15px 70px;
+}
+
+.lang{
+    margin-left: 20px;
+}
+
+.edu h1{
+    margin: 30px 60px;
+}
+
+.edu span{
+    font-weight: bold;
+    color: var(--beige);
+    
+}
+
+.school{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.subtitle{
+    letter-spacing: 5px;
+    color: var(--primary-color-dark);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.title span{
+    font-weight: 600;
+}
+
+.description{
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+}
+
+.action_btns{
+    display: flex;
+    gap: 1rem;
+}
+
+.action_btns button{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    
+}
+
+
+section .about a{
+    color: var(--extra-light);
+}
+
+section .about:hover{
+    background-color: var(--extra-light);
+}
+
+.image{
+    display: grid;
+    place-items: center;
+}
+
+.image img{
+    width: min(25rem, 90%);
+    border-radius: 100%;
+}
+
+@media (width < 750px){
+    nav .checkbox{
+        display: block;
+    }
+
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: var(--extra-light);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+   }
+
+   nav #check:checked ~ ul{
+    left: 0;
+   }
+
+   ul li a{
+    font-size: 1.25rem;
+   }
+
+   .section_container{
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+   }
+   .image{
+    grid-area: 1/1/2/2;
+   }
+
+   .action_btns{
+    margin: auto;
+   }
+
+
+}
